@@ -1,0 +1,278 @@
+<%- include partials/header.ejs %>
+<main id="formPage" class="well">
+    <div id="floating-panel">
+        <input id="latlng" type="text">
+        <input class="btn btn-primary" id="submit" type="button" value="Reverse Geocode">
+    </div>
+    <div id="map"></div>
+
+    <!--<section id="wrapper">-->
+        <!--<article>-->
+        <!--</article>-->
+    <!--</section>-->
+
+    <form method="post" action="/map">
+        <div class=" well form-group">
+            <label for="postalCode">Postal Code</label>
+            <input class="form-control" name="postalCode" type="text" required>
+        </div>
+        <div class=" well form-group">
+            <h4 class="formHeading">Majority Type of Housing</h4>
+            <select class="form-control" name="dd1">
+                <option value="">- Select One -</option>
+                <option value="Townhouse">Townhouse</option>
+                <option value="Semi-Detached">Semi-Detached</option>
+                <option value="Detached">Detached</option>
+                <option value="Apartment">Apartment</option>
+                <option value="Other">Other</option>
+            </select>
+            <h5>Comments</h5>
+            <textarea name="com1" class="form-control" rows="3"></textarea>
+        </div>
+
+
+
+        <div class=" well form-group">
+            <h4 class="formHeading">General Property</h4>
+            <h5>House</h5>
+            <select name="dd2" class="form-control">
+                <option>- Select One -</option>
+                <option>Derelict</option>
+                <option>Major Repairs</option>
+                <option>Minor Repairs</option>
+                <option>Fair Condition</option>
+                <option>New Condition</option>
+            </select>
+            <h5>Comments</h5>
+            <textarea name="com2" class="form-control" rows="3"></textarea>
+            <br>
+            <h5>Yard/Driveway</h5>
+            <select name="dd3" class="form-control">
+                <option>- Select One -</option>
+                <option>Derelict</option>
+                <option>Major Repairs</option>
+                <option>Minor Repairs</option>
+                <option>Fair Condition</option>
+                <option>New Condition</option>
+            </select>
+            <h5>Comments</h5>
+            <textarea name="com3" class="form-control" rows="3"></textarea>
+            <br>
+            <h5>Lighting</h5>
+            <select name="dd4" class="form-control">
+                <option>- Select One -</option>
+                <option>None</option>
+                <option>Insufficient</option>
+                <option>Adequate</option>
+                <option>Plenty</option>
+                <option>Substantial</option>
+            </select>
+            <h5>Comments</h5>
+            <textarea name="com4" class="form-control" rows="3"></textarea>
+            <br>
+        </div>
+
+
+
+
+        <div class=" well form-group">
+            <h4 class="formHeading">Vehicles</h4>
+            <h5>Condition</h5>
+            <select name="dd5" class="form-control">
+                <option>- Select One -</option>
+                <option>Derelict</option>
+                <option>Major Repairs</option>
+                <option>Minor Repairs</option>
+                <option>Fair Condition</option>
+                <option>New Condition</option>
+            </select>
+            <h5>Comments</h5>
+            <textarea name="com5" class="form-control" rows="3"></textarea>
+            <br>
+            <h5>Location</h5>
+            <select name="dd6"class="form-control">
+                <option>- Select One -</option>
+                <option>Street</option>
+                <option>Driveway</option>
+                <option>Garage</option>
+            </select>
+            <h5>Comments</h5>
+            <textarea name="com6" class="form-control" rows="3"></textarea>
+        </div>
+
+
+
+        <div class=" well form-group">
+            <h4 class="formHeading">Public Property Condition</h4>
+            <h5>Road Condition</h5>
+            <select name="dd7" class="form-control">
+                <option>- Select One -</option>
+                <option>Derelict</option>
+                <option>Major Repairs</option>
+                <option>Minor Repairs</option>
+                <option>Fair Condition</option>
+                <option>New Condition</option>
+            </select>
+            <h5>Comments</h5>
+            <textarea name="com7" class="form-control" rows="3"></textarea>
+            <br>
+            <h5>Existence of a Sidewalk</h5>
+            <select name="dd8"class="form-control">
+                <option>- Select One -</option>
+                <option>No</option>
+                <option>Yes</option>
+            </select>
+            <br>
+            <h5>(If Applicable) Sidewalk Condition</h5>
+            <select name="dd9"class="form-control">
+                <option>- Select One -</option>
+                <option>Derelict</option>
+                <option>Major Repairs</option>
+                <option>Minor Repairs</option>
+                <option>Fair Condition</option>
+                <option>New Condition</option>
+            </select>
+            <h5>Comments</h5>
+            <textarea name="com8" class="form-control" rows="3"></textarea>
+            <br>
+            <h5>Lighting</h5>
+            <select name="dd10" class="form-control">
+                <option>- Select One -</option>
+                <option>None</option>
+                <option>Insufficient</option>
+                <option>Adequate</option>
+                <option>Substantial</option>
+                <option>Plenty</option>
+            </select>
+            <h5>Comments</h5>
+            <textarea name="com9" class="form-control" rows="3"></textarea>
+        </div>
+
+
+
+
+        <div class=" well form-group">
+            <h4 class="formHeading">Cleanliness</h4>
+            <h5>Garbage</h5>
+            <select name="dd11" class="form-control">
+                <option>- Select One -</option>
+                <option>Substantial</option>
+                <option>Some</option>
+                <option>Moderate</option>
+                <option>Very little</option>
+                <option>None</option>
+            </select>
+            <h5>Comments</h5>
+            <textarea name="com10" class="form-control" rows="3"></textarea>
+            <br>
+            <h5>Graffiti</h5>
+            <select name="dd12" class="form-control">
+                <option>- Select One -</option>
+                <option>Substantial</option>
+                <option>Some</option>
+                <option>Moderate</option>
+                <option>Very little</option>
+                <option>None</option>
+            </select>
+            <h5>Comments</h5>
+            <textarea name="com11" class="form-control" rows="3"></textarea>
+        </div>
+
+
+
+
+        <div class=" well form-group">
+            <h4 class="formHeading">Social</h4>
+            <h5>Educational facilities</h5>
+            <select name="dd13" class="form-control">
+                <option>- Select One -</option>
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4+</option>
+            </select>
+            <h5>Comments</h5>
+            <textarea name="com12" class="form-control" rows="3"></textarea>
+            <br>
+            <h5>Community Establishments (Community centers, parks, places of worship, health care)</h5>
+            <select name="dd14" class="form-control">
+                <option>- Select One -</option>
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4+</option>
+            </select>
+            <h5>Comments</h5>
+            <textarea name="com13" class="form-control" rows="3"></textarea>
+            <br>
+            <h5>Public Transit</h5>
+            <br>
+            <h5>Available</h5>
+            <select name="dd15" class="form-control">
+                <option>- Select One -</option>
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+            <br>
+            <select name="dd16" class="form-control">
+                <option>- Select One -</option>
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4+</option>
+            </select>
+            <h5>Comments</h5>
+            <textarea name="com14" class="form-control" rows="3"></textarea>
+            <br>
+        </div>
+
+
+
+
+        <div class=" well form-group">
+            <h4 class="formHeading">Commercial</h4>
+            <h5>Economic (Food services, banking, retail, and industry)</h5>
+            <select name="dd17" class="form-control">
+                <option>- Select One -</option>
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4+</option>
+            </select>
+            <h5>Comments</h5>
+            <textarea name="com15" class="form-control" rows="3"></textarea>
+            <br>
+            <h5>Leisure (Movie theatres, Bowling, Mini golf)</h5>
+            <select name="dd18" class="form-control">
+                <option>- Select One -</option>
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4+</option>
+            </select>
+            <h5>Comments</h5>
+            <textarea name="com16" class="form-control" rows="3"></textarea>
+
+        </div>
+        <div class=" well form-group">
+            <h4 class="formHeading">Overall Comments</h4>
+            <h5>Comments</h5>
+            <textarea name="com17" class="form-control" rows="7"></textarea>
+            <br>
+
+        </div>
+
+        <button id="formButton" type="submit" class="btn btn-primary">Submit</button>
+        <br>
+        <br>
+    </form>
+
+
+
+</main>
+<%- include partials/footer.ejs %>

@@ -1,0 +1,27 @@
+<%- include partials/header.ejs %>
+
+<main>
+    <h1>Users</h1>
+
+    <!--create table-->
+    <table class="table table-bordered">
+        <!--loop through registered users-->
+        <thead>
+        <th>User ID</th><th>Username</th><th>Delete User</th>
+        </thead>
+        <tbody>
+        <% for (var i = 0; i < users.length; i++) { %>
+        <tr>
+            <td><%= users[i]._id %></td>
+            <td><%= users[i].username %></td>
+
+            <!--edit button-->
+            <td><a href="/delete/<%= users[i]._id %>"><button class="btn btn-danger"
+                                                                      type="button">Delete</button></a></td>
+        </tr>
+        <% } %>
+        </tbody>
+    </table>
+</main>
+
+<%- include partials/footer.ejs %>

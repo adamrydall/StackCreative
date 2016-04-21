@@ -1,0 +1,16 @@
+<%- include partials/header.ejs %>
+
+<main class="container">
+<h1>Data Results</h1>
+    <ul class="list-group">
+        <% for (var i = 0; i < data.length; i++) { %>
+        <li class="list-group-item">
+            <a href="/data/<%=data[i]._id %>" title="Postal Code">
+                <%= data[i].postalCode %></a>
+        </li>
+
+        <% } %>
+    </ul>
+</main>
+<%- include partials/footer.ejs %>
+
