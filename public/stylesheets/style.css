@@ -134,6 +134,19 @@ main#formPage {
   padding-top: 55px;
 }
 
+/*.h11 {*/
+  /*background-color: rgb(35, 35, 35);*/
+  /*width: 100%;*/
+  /*color: rgb(155, 155, 147);*/
+  /*padding-top: 0px;*/
+  /*text-align: center;*/
+/*}*/
+
+.h112 {
+  padding-top: 0px;
+  text-decoration: underline;
+}
+
 /*}*/
 /*.row {*/
 /*float: right !important;*/

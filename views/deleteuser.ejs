@@ -1,13 +1,13 @@
 <%- include partials/header.ejs %>
 
-<main>
-    <h1>Users</h1>
+<main class="container">
+    <h1 class="h112">Manage Existing Users</h1>
 
     <!--create table-->
-    <table class="table table-bordered">
+    <table class="table table-striped">
         <!--loop through registered users-->
         <thead>
-        <th>User ID</th><th>Username</th><th>Delete User</th>
+        <th>User ID</th><th>Username</th><th class="pull-right">Delete User</th>
         </thead>
         <tbody>
         <% for (var i = 0; i < users.length; i++) { %>
@@ -16,7 +16,7 @@
             <td><%= users[i].username %></td>
 
             <!--edit button-->
-            <td><a href="/delete/<%= users[i]._id %>"><button class="btn btn-danger"
+            <td class="pull-right"><a href="/delete/<%= users[i]._id %>"><button class="btn btn-danger"
                                                                       type="button">Delete</button></a></td>
         </tr>
         <% } %>
