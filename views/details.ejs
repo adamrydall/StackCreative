@@ -1,149 +1,222 @@
 <%- include partials/header.ejs %>
 
 <main class="container">
-    <h1>Data Results</h1>
+    <h1>Assessment Results</h1>
     <form>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Date and Postal Code</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Date</label>
+                            <input type="email" class="form-control"  placeholder="<%= data.created %>" readonly>
+                            <br>
+                            <label for="exampleInputEmail1">Postal Code</label>
+                            <input type="email" class="form-control"  placeholder="<%= data.postalCode %>" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Majority Type of Housing</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Housing Type</label>
+                            <input type="password" class="form-control"  placeholder="<%= data.dd1 %>" readonly>
 
-        <div class="form-group">
-            <label for="exampleInputEmail1">Date</label>
-            <input type="email" class="form-control"  placeholder="<%= data.created %>" readonly>
-            <label for="exampleInputEmail1">Postal Code</label>
-            <input type="email" class="form-control"  placeholder="<%= data.postalCode %>" readonly>
+                            <h5>Comments</h5>
+                            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com1 %></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <br>
 
-        <div class="form-group">
-            <h4 class="formHeading">Majority Type of Housing</h4>
-            <label for="exampleInputPassword1">Housing Type</label>
-            <input type="password" class="form-control"  placeholder="<%= data.dd1 %>" readonly>
-            <h5>Comments</h5>
-            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com1 %></textarea>
+
+
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">General Property</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Housing</label>
+                            <input type="password" class="form-control"  placeholder="<%= data.dd2 %>" readonly>
+                            <h5>Comments</h5>
+                            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com2 %></textarea>
+                            <br>
+                            <label for="exampleInputPassword1">Yard/Driveway</label>
+                            <input type="password" class="form-control"  placeholder="<%= data.dd3 %>" readonly>
+                            <h5>Comments</h5>
+                            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com3 %></textarea>
+                            <br>
+                            <label for="exampleInputPassword1">Lighting</label>
+                            <input type="password" class="form-control"  placeholder="<%= data.dd4 %>" readonly>
+                            <h5>Comments</h5>
+                            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com4 %></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Vehicles</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Condition</label>
+                            <input type="password" class="form-control"  placeholder="<%= data.dd5 %>" readonly>
+                            <h5>Comments</h5>
+                            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com5 %></textarea>
+                            <br>
+                            <label for="exampleInputPassword1">Location</label>
+                            <input type="password" class="form-control"  placeholder="<%= data.dd6 %>" readonly>
+                            <h5>Comments</h5>
+                            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com6 %></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <br>
 
 
-        <div class="form-group">
-            <h4 class="formHeading">General Property</h4>
-            <label for="exampleInputPassword1">Housing</label>
-            <input type="password" class="form-control"  placeholder="<%= data.dd2 %>" readonly>
-            <h5>Comments</h5>
-            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com2 %></textarea>
-            <br>
 
-            <label for="exampleInputPassword1">Yard/Driveway</label>
-            <input type="password" class="form-control"  placeholder="<%= data.dd3 %>" readonly>
-            <h5>Comments</h5>
-            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com3 %></textarea>
-            <br>
 
-            <label for="exampleInputPassword1">Lighting</label>
-            <input type="password" class="form-control"  placeholder="<%= data.dd4 %>" readonly>
-            <h5>Comments</h5>
-            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com4 %></textarea>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Public Property Condition</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Road Condition</label>
+                            <input type="password" class="form-control"  placeholder="<%= data.dd7 %>" readonly>
+                            <h5>Comments</h5>
+                            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com7 %></textarea>
+                            <br>
+                            <label for="exampleInputPassword1">Existence of a Sidewalk</label>
+                            <input type="password" class="form-control"  placeholder="<%= data.dd8 %>" readonly>
+                            <label for="exampleInputPassword1">Sidewalk Condition (If Applicable)</label>
+                            <input type="password" class="form-control"  placeholder="<%= data.dd9 %>" readonly>
+                            <h5>Comments</h5>
+                            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com8 %></textarea>
+                            <br>
+                            <label for="exampleInputPassword1">Lighting</label>
+                            <input type="password" class="form-control"  placeholder="<%= data.dd10 %>" readonly>
+                            <h5>Comments</h5>
+                            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com9 %></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Cleanliness</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Garbage</label>
+                            <input type="password" class="form-control"  placeholder="<%= data.dd11 %>" readonly>
+                            <h5>Comments</h5>
+                            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com10 %></textarea>
+                            <br>
+                            <label for="exampleInputPassword1">Graffiti</label>
+                            <input type="password" class="form-control"  placeholder="<%= data.dd12 %>" readonly>
+                            <h5>Comments</h5>
+                            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com11 %></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <br>
 
 
-        <div class="form-group">
-            <h4 class="formHeading">Vehicles</h4>
-            <label for="exampleInputPassword1">Condition</label>
-            <input type="password" class="form-control"  placeholder="<%= data.dd5 %>" readonly>
-            <h5>Comments</h5>
-            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com5 %></textarea>
-            <br>
 
-            <label for="exampleInputPassword1">Location</label>
-            <input type="password" class="form-control"  placeholder="<%= data.dd6 %>" readonly>
-            <h5>Comments</h5>
-            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com6 %></textarea>
+
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Commercial</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Economic (Food services, banking, retail, and industry)</label>
+                            <input type="password" class="form-control"  placeholder="<%= data.dd17 %>" readonly>
+                            <h5>Comments</h5>
+                            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com15 %></textarea>
+                            <br>
+                            <label for="exampleInputPassword1">Leisure (Movie theatres, Bowling, Mini golf)</label>
+                            <input type="password" class="form-control"  placeholder="<%= data.dd18 %>" readonly>
+                            <h5>Comments</h5>
+                            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com16 %></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Social</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Educational facilities</label>
+                            <input type="password" class="form-control"  placeholder="<%= data.dd13 %>" readonly>
+                            <h5>Comments</h5>
+                            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com12 %></textarea>
+                            <br>
+                            <label for="exampleInputPassword1">Community Establishments (Community centers, parks, places of worship, health care)</label>
+                            <input type="password" class="form-control"  placeholder="<%= data.dd14 %>" readonly>
+                            <h5>Comments</h5>
+                            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com13 %></textarea>
+                            <br>
+                            <label for="exampleInputPassword1">Public Transit</label>
+                            <input type="password" class="form-control"  placeholder="<%= data.dd15 %>" readonly>
+                            <br>
+                            <label for="exampleInputPassword1">Rating</label>
+                            <input type="password" class="form-control"  placeholder="<%= data.dd16 %>" readonly>
+                            <h5>Comments</h5>
+                            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com14 %></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <br>
 
 
-        <div class="form-group">
-            <h4 class="formHeading">Public Property Condition</h4>
-            <label for="exampleInputPassword1">Road Condition</label>
-            <input type="password" class="form-control"  placeholder="<%= data.dd7 %>" readonly>
-            <h5>Comments</h5>
-            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com7 %></textarea>
-            <br>
-
-            <label for="exampleInputPassword1">Existence of a Sidewalk</label>
-            <input type="password" class="form-control"  placeholder="<%= data.dd8 %>" readonly>
-            <label for="exampleInputPassword1">Sidewalk Condition (If Applicable)</label>
-            <input type="password" class="form-control"  placeholder="<%= data.dd9 %>" readonly>
-            <h5>Comments</h5>
-            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com8 %></textarea>
-            <br>
-
-            <label for="exampleInputPassword1">Lighting</label>
-            <input type="password" class="form-control"  placeholder="<%= data.dd10 %>" readonly>
-            <h5>Comments</h5>
-            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com9 %></textarea>
-        </div>
-        <br>
 
 
-        <div class="form-group">
-            <h4 class="formHeading">Cleanliness</h4>
-            <label for="exampleInputPassword1">Garbage</label>
-            <input type="password" class="form-control"  placeholder="<%= data.dd11 %>" readonly>
-            <h5>Comments</h5>
-            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com10 %></textarea>
-            <br>
 
-            <label for="exampleInputPassword1">Graffiti</label>
-            <input type="password" class="form-control"  placeholder="<%= data.dd12 %>" readonly>
-            <h5>Comments</h5>
-            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com11 %></textarea>
-        </div>
-        <br>
-
-
-        <div class="form-group">
-            <h4 class="formHeading">Social</h4>
-            <label for="exampleInputPassword1">Educational facilities</label>
-            <input type="password" class="form-control"  placeholder="<%= data.dd13 %>" readonly>
-            <h5>Comments</h5>
-            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com12 %></textarea>
-            <br>
-
-            <label for="exampleInputPassword1">Community Establishments (Community centers, parks, places of worship, health care)</label>
-            <input type="password" class="form-control"  placeholder="<%= data.dd14 %>" readonly>
-            <h5>Comments</h5>
-            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com13 %></textarea>
-            <br>
-
-            <label for="exampleInputPassword1">Public Transit</label>
-            <input type="password" class="form-control"  placeholder="<%= data.dd15 %>" readonly>
-            <label for="exampleInputPassword1">Rating</label>
-            <input type="password" class="form-control"  placeholder="<%= data.dd16 %>" readonly>
-            <h5>Comments</h5>
-            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com14 %></textarea>
-        </div>
-        <br>
-
-
-        <div class="form-group">
-            <h4 class="formHeading">Commercial</h4>
-            <label for="exampleInputPassword1">Economic (Food services, banking, retail, and industry)</label>
-            <input type="password" class="form-control"  placeholder="<%= data.dd17 %>" readonly>
-            <h5>Comments</h5>
-            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com15 %></textarea>
-            <br>
-
-            <label for="exampleInputPassword1">Leisure (Movie theatres, Bowling, Mini golf)</label>
-            <input type="password" class="form-control"  placeholder="<%= data.dd18 %>" readonly>
-            <h5>Comments</h5>
-            <textarea name="com1" class="form-control" rows="3" readonly><%= data.com16 %></textarea>
-        </div>
-        <br>
-
-
-        <div class="form-group">
-            <h4 class="formHeading">Overall Comments</h4>
-            <h5>Comments</h5>
-            <textarea class="form-control" rows="7" readonly><%= data.com17 %></textarea>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Overall Comments</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <textarea class="form-control" rows="7" readonly><%= data.com17 %></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </form>
     <br>
