@@ -1,16 +1,39 @@
 <%- include partials/header.ejs %>
 
 <main class="container">
-<h1>Data Results</h1>
-    <ul class="list-group">
-        <% for (var i = 0; i < data.length; i++) { %>
-        <li class="list-group-item">
-            <a href="/data/<%=data[i]._id %>" title="Postal Code">
-                <%= data[i].postalCode %></a>
-        </li>
+    <div class="row">
+        <div class="col-md-6 bp6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Data Results</h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-group">
+                        <% for (var i = 0; i < data.length; i++) { %>
+                        <li class="list-group-item">
+                            <a href="/data/<%=data[i]._id %>" title="Postal Code">
+                                <%= data[i].postalCode %></a>
+                        </li>
 
-        <% } %>
-    </ul>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 bp6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Hint</h3>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        Here is where you will find the the Data Results for your completed assessments. To view the results "Click" on one of the result links to the left.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </main>
 <%- include partials/footer.ejs %>
 

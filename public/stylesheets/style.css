@@ -107,6 +107,33 @@ main#formPage {
   padding-top: 50px;
 }
 
+
+
+.bp1 {
+  padding-bottom: 31px;
+}
+
+.bp2 {
+  padding-bottom: 189px;
+}
+
+.bp3 {
+  padding-bottom: 248px;
+}
+
+.bp4 {
+  padding-bottom: 287px;
+}
+
+.bp5 {
+  padding-bottom: 18px;
+
+}
+
+.bp6 {
+  padding-top: 55px;
+}
+
 /*}*/
 /*.row {*/
 /*float: right !important;*/
